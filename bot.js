@@ -7,6 +7,7 @@ client.commands = new Collection();
 client.queue = new Map();
 const cooldowns = new Collection();
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const bot = client;
 
 let prefix = config['prefix'];
 client.login(config['token']);
