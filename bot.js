@@ -1,6 +1,9 @@
-const { Client, Intents, MessageEmbed } = require('discord.js');
+const { Client, Intents, MessageEmbed, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const config = require('./config.js')
+const config = require('./config.js');
+const fs = require('fs');
+const chalk = require('chalk');
+client.commands = new Collection();
 
 let prefix = config['prefix'];
 client.login(config['token']);

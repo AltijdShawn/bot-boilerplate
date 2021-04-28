@@ -1,14 +1,24 @@
 {
+  "name": "amber",
+  "version": "1.0.0",
+  "description": "The new main amber bot",
   "main": "index.js",
+  "repository": "https://github.com/AltijdShawn/bot-boilerplate.git",
+  "author": "SSYT_Amy",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "nodemon ."
   },
   "dependencies": {
     "@discordjs/opus": "^0.5.0",
     "bufferutil": "^4.0.3",
+    "chalk": "^4.1.1",
     "discord.js": "^12.5.3",
     "erlpack": "github:discord/erlpack",
+    "ffmpeg-static": "^4.3.0",
     "libsodium-wrappers": "^0.7.9",
+    "node-fetch": "^2.6.1",
     "opusscript": "0.0.8",
     "sodium": "^3.0.2",
     "utf-8-validate": "^5.0.4",
