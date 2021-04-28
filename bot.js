@@ -4,9 +4,16 @@ const config = require('./config.js');
 const fs = require('fs');
 const chalk = require('chalk');
 client.commands = new Collection();
+client.queue = new Map();
+const cooldowns = new Collection();
+const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 let prefix = config['prefix'];
 client.login(config['token']);
+
+client.on('ready', () => {
+  client.user.setActivity(`You`, { type: "WATCHING" })
+});
 
 const commandFolders = fs.readdirSync('./commands');
 
