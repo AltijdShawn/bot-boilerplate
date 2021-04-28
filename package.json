@@ -1,12 +1,12 @@
 {
-  "name": "amber",
+  "name": "",
   "version": "1.0.0",
-  "description": "The new main amber bot",
+  "description": "",
   "main": "index.js",
   "repository": "https://github.com/AltijdShawn/bot-boilerplate.git",
   "author": "SSYT_Amy",
-  "license": "MIT",
-  "private": true,
+  "license": "",
+  "private": false,
   "scripts": {
     "start": "nodemon ."
   },
