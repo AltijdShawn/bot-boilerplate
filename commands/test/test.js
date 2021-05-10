@@ -6,12 +6,12 @@ module.exports = {
     usage: "",
     commandCategory: "",
     cooldownTime: '0',
-	async execute(message, args, client, bot) {
+	async execute(message, args, client, config) {
 		try {
             message.reply("Test command werkt")
         }
         catch(e) {
-            console.log("Oh oh! ging nie zo goe of wel?")
+            console.log("Error:", `\n${e}`)
         }
 	},
 };
