@@ -1,4 +1,9 @@
 module.exports = {
-	token: "",
-	prefix: ""
+    prefix: "",
+
+    token: "",
+    id: "",
+    secret: "",
+
+    owner_id: "",
 }
