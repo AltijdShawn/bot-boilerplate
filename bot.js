@@ -4,6 +4,7 @@ const config = require('./config.js');
 const fs = require('fs');
 const chalk = require('chalk');
 client.commands = new Collection();
+client.categories = new Collection();
 client.queue = new Map();
 const cooldowns = new Collection();
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -23,6 +24,7 @@ for (const folder of commandFolders) {
   for (const file of commandFiles) {
     const command = require(`./commands/${folder}/${file}`);
     client.commands.set(command.name, command);
+    client.categories.set(command.commandCategory, command)
     console.log(chalk.redBright(`loaded: `) + chalk.green(`./commands/`) + chalk.blueBright(`${folder}/`) + chalk.yellowBright(`${file}`))
   }
 }
